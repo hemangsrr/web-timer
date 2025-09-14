@@ -1,6 +1,7 @@
 /* General Styles */
 body {
-    background-color: #f8f9fa;
+    background-color: #0f0f10; /* deep dark */
+    color: #e5e7eb; /* light gray text */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -8,31 +9,42 @@ body {
 #timer {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    color: #0d6efd;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    color: #0d6efd; /* default; can be overridden by user style */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
     margin: 20px 0;
 }
 
 /* Card Styling */
 .card {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #141416;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
     overflow: hidden;
 }
 
 .card-header {
-    background-color: #0d6efd;
-    color: white;
+    background-color: #1b1d20;
+    color: #e5e7eb;
     padding: 1rem;
-    border-bottom: none;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 /* Form Controls */
 .form-control {
+    background-color: #0f0f10;
+    color: #e5e7eb;
+    border: 1px solid rgba(255,255,255,0.08);
     text-align: center;
     font-size: 1.2rem;
     padding: 0.5rem;
+}
+
+.form-control:focus {
+    background-color: #0f0f10;
+    color: #fff;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 .2rem rgba(13,110,253,.15);
 }
 
 /* Buttons */
@@ -52,14 +64,17 @@ body {
 
 /* Modal */
 .modal-content {
-    border: none;
-    border-radius: 15px;
+    background-color: #141416;
+    color: #e5e7eb;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
 }
 
 .modal-header {
-    background-color: #0d6efd;
-    color: white;
-    border-radius: 15px 15px 0 0;
+    background-color: #1b1d20;
+    color: #e5e7eb;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px 12px 0 0;
 }
 
 /* Responsive Adjustments */
@@ -83,11 +98,17 @@ body {
 
 .timer-ended {
     animation: pulse 1s infinite;
-    color: #dc3545 !important;
+    color: #ff6b6b !important;
 }
 
 /* Current time display */
 #current-time {
     font-size: 1.2rem;
     margin-top: 10px;
+    color: #cbd5e1;
+}
+
+/* Utility overrides for lists/labels in dark */
+label, .form-label, .form-text, .text-muted {
+    color: #b6bbc6 !important;
 }
